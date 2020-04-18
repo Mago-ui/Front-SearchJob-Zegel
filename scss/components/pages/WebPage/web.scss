@@ -1,37 +1,58 @@
-.ContenedorHack {
 
+.ContenedorHack {
     background: $white;
     position: fixed;
     z-index: 100;
     width: 100%;
-
-
+    filter: drop-Shadow(rgba(0, 0, 0, 0.16) 2px 4px 20px);
 
     &-body {
 
-        display: flex;
+                                                                                                            display: flex;
         justify-content: space-between;
         align-items: center;
         height: 4em;
-
     }
 
     &-zegel {
         img {
-            width: 49px;
+            width: 55px;
         }
 
         &-logo {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 178px;
+
+
+            @include rwd(857px)
+            {
+                display: flex;
+                flex-direction: column;
+                width: auto;
+            }
             p {
                 color: $blue;
                 font-size: 14px;
                 font-weight: 600;
+                font-family: $Pop;
+                @include rwd(492px)
+                {
+                    font-size: 13px;
+                }
+
 
             }
 
             span {
                 color: $green;
                 font-size: $xs;
+                @include rwd(492px)
+                {
+                    font-size: 11px;
+                }
             }
         }
     }
@@ -44,47 +65,65 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 100vh;
+        height: 48em;
         position: relative;
         box-shadow: 17px 606px 413px -15px #0000008c inset;
     }
 
 
     &-contenedor {
-        height: 100vh;
+        height: 48em;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         background: #287de836;
 
-        p {
+        h2 {
             font-weight: 600;
-            font-size: 48px;
+            font-size: 36px;
+            line-height: 50px;
             color: $white;
             text-align: center;
+            font-family: $Pop;
+            @include rwd(528px)
+            {
+                font-size: 45px;
+            }
         }
 
         span {
-            font-size: 12px;
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 26px;
             color: $white;
             height: 6em;
             display: flex;
             align-items: end;
+            text-align: center;
+            @include rwd(852px)
+            {
+                text-align: inherit;;
+            }
         }
     }
 
     &-busqueda {
         background: $white;
-        width: 504px;
         height: 104px;
         position: relative;
         width: 54em;
+     
+        @include rwd(1056px)
+        {
+       
+        }
 
         p {
             color: $green;
             font-weight: 100;
             font-size: $xs;
+            margin-left: 15px;
         }
 
         &-empleos {
@@ -133,20 +172,11 @@
         }
     }
 
-
-
-
-
-
-
-
-
-
 }
 
 
-
-.lupa {
+.lupa
+{
     background: $blue;
     width: 57px;
     display: flex;
@@ -167,4 +197,323 @@
 .iconos {
     display: flex;
     align-items: center;
+}
+
+
+
+.pageCard
+{
+    width: 100%;
+    height: auto;
+    background: #fafafa;
+    padding-top: 50px;
+
+    &-trabajos {
+        height: 4em;
+        display: flex;
+        align-items: center;
+
+        span {
+            font-size: 26px;
+            color: $blue;
+            font-weight: 500;
+            font-family: $Pop;
+        }
+    }
+
+}
+
+.modeloCard
+{
+    width: 100%;
+    background: #ffff;
+    min-height: 275px;
+    border-radius: 0.4em;
+    box-shadow: 1px 2px 2px 2px #76767626;
+    margin: 11px 0;
+
+
+    @include rwd(846px)
+    {
+        width: 49%;  
+    }
+    @include rwd(1245px) {
+        width: 32%;
+    }
+
+
+
+    &-contenedor {
+        margin-right: auto;
+        margin-left: auto;
+        width: calc(100% - 0.7rem * 4);
+    }
+
+    &-contenedor-section {
+        height: 16.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &-time {
+
+
+            height: 3.5em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                padding: 8px 15px 11px 9px;
+                background: $verde;
+                border-radius: 1em;
+                color: $white;
+                height: 2em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: $xs;
+            }
+
+            span {
+                color: $green;
+                font-size: 12px;
+
+            }
+
+            &-text {
+
+                p:nth-child(1) {
+
+                    min-height: 34px;
+                    color: $blue;
+                    font-weight: 500;
+                    height: 31px;
+                    font-family: $Pop;
+
+                }
+
+                p:nth-child(2) {
+                    color: $green;
+                    font-weight: 600;
+                    font-family: $Pop;
+                    font-size: 14px;
+                    min-height: 16px;
+                }
+
+                p:nth-child(3) {
+                    min-height: 79px;
+                    display: flex;
+                    align-items: center;
+                    line-height: 1.5em;
+                    color: $green;
+                    font-weight: 400;
+                    font-size: 12px;
+                }
+
+
+                &-country {
+                    span {
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        color: $green;
+                        font-size: 14px;
+                    }
+
+                    h4:nth-child(1) {
+                        color: $blue;
+                        font-size: 14px;
+                    }
+
+                }
+            }
+
+        }
+    }
+
+}
+
+
+.ciudad
+{
+    color: $green;
+    font-weight: 200;
+    display: flex;
+    justify-content: end;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.contenedor-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 80px;
+
+}
+
+.pageCard-Three
+{
+    width: 100%;
+    height: auto;
+    background: $white;
+
+}
+
+
+.cardsContenedor{
+    width: 100%;
+    min-height: 184px;
+    border-radius: 5px;
+    border: 1px solid #eff2f5;
+    margin: 13px 0;
+     @include rwd(900px)
+     {
+        width: 49%;  
+     }
+
+
+    &-section
+    {
+        min-height: 118px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 1.6em;
+        &-job
+        {
+            font-size: 16px;
+            color:$blue;
+            font-weight: 500;
+            font-family: $Pop;
+        }
+        &-enterprise
+        {
+            font-size: 16px;
+            color:$green;
+            font-weight: 500;
+            font-family: $Pop;
+        }
+
+
+        span 
+        {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color:$green;
+            font-weight: 500;
+            
+        }
+
+    }
+
+    &-fecha
+    {
+        display: flex;
+        align-items: center;
+        height: 4em;
+        border: 1px solid #eff2f5;
+        box-shadow: 0 0 0.2px 0 rgba(0, 0, 0, 0.15);
+        justify-content: space-around;
+        font-weight: 500;
+        color:$green;
+        div
+        {
+            min-height: 4em;
+            align-items: center;
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+    &-precio
+    {
+        color:$celeste;
+    }
+        
+        &-dep
+        {
+
+            box-shadow: -1.5px 0.4px 0.3px 1.4px rgba(0, 0, 0, 0.03);
+       
+        }
+    }
+}
+
+.flex-wrap
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 80px; 
+}
+
+
+.busquedaHack
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 93px;
+
+    &-section
+    {
+
+       
+        width: 100%;
+        input 
+        {    
+            outline: none;
+            border: 1px solid $white;
+        }
+    }
+    &-lupa
+    {
+
+    }
+}
+
+.busquedaButton
+{
+    background: $blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 66px;
+    width: 160px;
+    border-radius: 6px;
+    color:$white;
+    img {
+        width: 17px;
+    }
+}
+
+
+.busquedaHack-section
+{
+    input:first-child{
+        min-height: 67px;
+        padding: 0 0 0 1em;
+        width: 73%;
+        border: 1px solid #e6d9d9bf;
+        color: $gris;
+        font-size: 16px;
+    }
+
+    input:last-child{
+        min-height: 67px;
+        padding: 0 0 0 1em;
+        width: 26%;
+        border: 1px solid #e6d9d9bf;
+        color: $gris;
+        font-size: 16px;
+    }
+
+}
+
+.section-Information{
+    padding-top: 50px;
 }

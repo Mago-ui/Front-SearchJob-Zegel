@@ -1,18 +1,20 @@
 $blue:#324b6e;
 $green: #767676;
 $white:#ffff;
-
-
+$verde:#81c784;
+$red:#e60600;
+$celeste:#55acee;
+$gris:#a7a1a1;
 
 $s: 16px;
-$xs:13px;
+$xs:12px;
 
-$Mont: 'Montserrat', sans-serif;
+
 $Pop: 'Poppins', sans-serif;
 
 
 *,*::before , *::after {
-	font-family: $Mont;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 	box-sizing: border-box;
 }
 
