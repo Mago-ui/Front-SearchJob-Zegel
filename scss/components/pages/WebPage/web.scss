@@ -1,0 +1,170 @@
+.ContenedorHack {
+
+    background: $white;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+
+
+
+    &-body {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 4em;
+
+    }
+
+    &-zegel {
+        img {
+            width: 49px;
+        }
+
+        &-logo {
+            p {
+                color: $blue;
+                font-size: 14px;
+                font-weight: 600;
+
+            }
+
+            span {
+                color: $green;
+                font-size: $xs;
+            }
+        }
+    }
+
+
+
+
+    &-Background {
+        background-image: url('/img/img-011.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+        box-shadow: 17px 606px 413px -15px #0000008c inset;
+    }
+
+
+    &-contenedor {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #287de836;
+
+        p {
+            font-weight: 600;
+            font-size: 48px;
+            color: $white;
+            text-align: center;
+        }
+
+        span {
+            font-size: 12px;
+            color: $white;
+            height: 6em;
+            display: flex;
+            align-items: end;
+        }
+    }
+
+    &-busqueda {
+        background: $white;
+        width: 504px;
+        height: 104px;
+        position: relative;
+        width: 54em;
+
+        p {
+            color: $green;
+            font-weight: 100;
+            font-size: $xs;
+        }
+
+        &-empleos {
+            background: $blue;
+            width: 139px;
+            height: 2.5em;
+            border-radius: 0.3em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: -2.5em;
+            color: $white;
+            font-size: 12px;
+
+        }
+
+
+
+
+        &-cajas {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 6.5em;
+
+            &-section {
+                width: 44%;
+                line-height: 1.7em;
+
+                p {
+                    display: flex;
+                    justify-content: end;
+                    font-size: $xs;
+                }
+
+                input {
+                    color: $blue;
+                    border: 1px solid white;
+                    font-size: 26px;
+                    outline: none;
+                    font-weight: 400;
+                }
+
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+.lupa {
+    background: $blue;
+    width: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.4em;
+    height: 3.5em;
+
+    img {
+        width: 16px;
+    }
+}
+
+.separation {
+    display: flex;
+}
+
+.iconos {
+    display: flex;
+    align-items: center;
+}
